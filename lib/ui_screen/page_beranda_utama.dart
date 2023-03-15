@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unj/ui_screen/page_grid_event.dart';
 import 'package:unj/ui_screen/page_simple_grid.dart';
 
 class PageBerandaUtama extends StatefulWidget {
@@ -40,6 +41,17 @@ class _PageBerandaUtamaState extends State<PageBerandaUtama> {
                     MaterialPageRoute(builder: (context) => PageSimpleGrid()));
               },
               child: Text('Simple Gridview'),
+              color: Colors.yellowAccent,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: MaterialButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => PageGridEvent()));
+              },
+              child: Text('Galery Event'),
               color: Colors.yellowAccent,
             ),
           )
