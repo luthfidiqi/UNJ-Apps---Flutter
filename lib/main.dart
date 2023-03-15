@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:unj/ui_screen/page_beranda_utama.dart';
+import 'package:unj/ui_screen/page_profile.dart';
 import 'package:unj/ui_screen/page_register.dart';
 import 'package:unj/ui_screen/page_splash_screen.dart';
 
@@ -60,6 +61,53 @@ class _PageHomeUtamaState extends State<PageHomeUtama> {
       // AppBar : Widget
       // Child : Bisa Menampung 1 Widget
       // Children : Bisa Menampung Banyak Children
+
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            Container(
+              color: Colors.deepOrange,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 8.0),
+                    child: Image.asset('images/profile.png'),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 8, bottom: 8),
+                    child: Text(
+                      'Luthfi Thufail Asiddiqi',
+                      style: TextStyle(fontSize: 11, color: Colors.white),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PageProfile()));
+                      },
+                      child: Text(
+                        'My Profile',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
 
       body: Center(
         child: Column(

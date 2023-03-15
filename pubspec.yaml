@@ -64,6 +64,7 @@ flutter:
     - images/event3.png
     - images/event4.png
     - images/event5.png
+    - images/profile.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
