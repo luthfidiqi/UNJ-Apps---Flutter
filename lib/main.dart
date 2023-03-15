@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:unj/ui_screen/page_beranda_utama.dart';
 import 'package:unj/ui_screen/page_profile.dart';
 import 'package:unj/ui_screen/page_register.dart';
@@ -183,6 +184,16 @@ class _PageHomeUtamaState extends State<PageHomeUtama> {
               child: InkWell(
                 onTap: () {
                   // Pindah Ke Register
+
+                  Fluttertoast.showToast(
+                      msg: "Anda Masuk Menu Registrasi",
+                      toastLength: Toast.LENGTH_SHORT,
+                      gravity: ToastGravity.CENTER,
+                      timeInSecForIosWeb: 1,
+                      backgroundColor: Colors.red,
+                      textColor: Colors.white,
+                      fontSize: 16.0);
+
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => PageRegister()));
                 },
