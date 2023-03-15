@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unj/ui_screen/page_detail_event.dart';
 
 class PageGridEvent extends StatefulWidget {
   const PageGridEvent({super.key});
@@ -20,22 +21,22 @@ class _PageGridEventState extends State<PageGridEvent> {
     {
       "nama": "Event Lomba 2",
       "gambar": "event2.png",
-      "isi": "ini adalah event kita yang pertama di bulan ini!"
+      "isi": "ini adalah event kita yang kedua di bulan ini!"
     },
     {
       "nama": "Event Lomba 3",
       "gambar": "event3.png",
-      "isi": "ini adalah event kita yang pertama di bulan ini!"
+      "isi": "ini adalah event kita yang ketiga di bulan ini!"
     },
     {
       "nama": "Event Lomba 4",
       "gambar": "event4.png",
-      "isi": "ini adalah event kita yang pertama di bulan ini!"
+      "isi": "ini adalah event kita yang keempat di bulan ini!"
     },
     {
       "nama": "Event Lomba 5",
       "gambar": "event5.png",
-      "isi": "ini adalah event kita yang pertama di bulan ini!"
+      "isi": "ini adalah event kita yang kelima di bulan ini!"
     }
   ];
   // JSON -> Javascript object notation
@@ -56,6 +57,13 @@ class _PageGridEventState extends State<PageGridEvent> {
           child: InkWell(
             onTap: () {
               // pindah ke page detail
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => PageDetailEvent(
+                          nNamaEvent: namaEvent!,
+                          nIsiEvent: isiEvent!,
+                          nGambarEvent: gambarEvent!)));
             },
             child: Column(
               children: [
